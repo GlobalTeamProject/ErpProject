@@ -1,0 +1,27 @@
+package com.example.demo;
+
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.PostMapping;
+@RestController
+public class HelloController {
+    
+	// 1. 처음 접속 시 로그인 페이지 호출
+    @GetMapping("/")
+    public String loginPage() {
+        return "login";
+    }
+
+    // 2. 로그인 버튼 클릭 시 대시보드로 이동 (POST 방식)
+    @PostMapping("/login")
+    public String loginProcess() {
+        // 실제로는 여기서 ID/PW 체크 로직이 들어갑니다.
+        return "redirect:/dashboard";
+    }
+
+    // 3. 메인 대시보드 페이지 호출
+    @GetMapping("/dashboard")
+    public String dashboardPage() {
+        return "index";
+    }
+}

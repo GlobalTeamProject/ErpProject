@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>시스템 로그인</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body class="login-body">
+    <div class="login-card">
+        <div class="login-header">
+            <h2>Management System</h2>
+            <p>계정 정보를 입력하여 로그인하세요.</p>
+        </div>
+        <form action="/login" method="post">
+            <div class="input-group">
+                <label>Username</label>
+                <input type="text" name="username" placeholder="아이디를 입력하세요" required>
+            </div>
+            <div class="input-group">
+                <label>Password</label>
+                <input type="password" name="password" placeholder="비밀번호를 입력하세요" required>
+            </div>
+            <button type="submit" class="login-btn">Sign In</button>
+        </form>
+        <div class="login-footer">
+            <p>비밀번호를 잊으셨나요? <a href="#">고객센터 문의</a></p>
+        </div>
+    </div>
+</body>
+</html>
