@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="UTF-8" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Login</title>
+    <link rel="stylesheet" th:href="@{/css/index_css.css}">
+</head>
+<body>
+<div class="dashboard-container">
+    <!-- 사이드바: 모든 페이지 공통 -->
+    <div th:replace="~{nav :: sidebar}"></div>
+</div>
+</body>
+</html>

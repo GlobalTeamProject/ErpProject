@@ -1,13 +1,12 @@
-/* --- 밝은 테마용 변수 정의 --- */
 :root {
-    --bg-color: #f4f7f6;        /* 전체 배경 (연한 회색) */
-    --sidebar-bg: #ffffff;      /* 사이드바 배경 (흰색) */
-    --main-bg: #ffffff;         /* 메인 콘텐츠 배경 (흰색) */
-    --text-main: #333333;       /* 주요 텍스트 (진한 회색) */
-    --text-muted: #666666;      /* 보조 텍스트 (회색) */
-    --accent-color: #4a90e2;    /* 포인트 컬러 (화사한 파랑) */
-    --hover-color: #eef5ff;     /* 호버 효과 (연한 파란색) */
-    --border-color: #e0e0e0;    /* 테두리 색상 */
+    --bg-color: #f4f7f6;
+    --sidebar-bg: #ffffff;
+    --main-bg: #ffffff;
+    --text-main: #333333;
+    --text-muted: #666666;
+    --accent-color: #4a90e2;
+    --hover-color: #eef5ff;
+    --border-color: #e0e0e0;
 }
 
 * {
@@ -22,30 +21,25 @@ body {
     color: var(--text-main);
     height: 100vh;
     display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-/* --- 전체 컨테이너 --- */
-.dashboard-container {
-    display: flex;
-    width: 95%;
-    max-width: 1200px;
-    height: 80vh;
-    background-color: var(--sidebar-bg);
-    border-radius: 15px;
-    box-shadow: 0 5px 20px rgba(0,0,0,0.05);
-    border: 1px solid var(--border-color);
     overflow: hidden;
 }
 
-/* --- 사이드바 --- */
+/* 전체 레이아웃 */
+.dashboard-container {
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+}
+
+/* 사이드바 고정 */
 .sidebar {
     width: 250px;
+    flex-shrink: 0;
     display: flex;
     flex-direction: column;
     padding: 20px;
     border-right: 1px solid var(--border-color);
+    background-color: var(--sidebar-bg);
 }
 
 .logo {
@@ -63,48 +57,71 @@ body {
     flex-grow: 1;
 }
 
-.sidebar button {
-    background: none;
-    border: none;
+.sidebar a {
+    text-decoration: none;
     color: var(--text-muted);
-    width: 100%;
-    padding: 12px 15px;
-    text-align: left;
-    cursor: pointer;
-    border-radius: 8px;
-    transition: all 0.2s;
     display: flex;
     align-items: center;
     gap: 15px;
+    padding: 12px 15px;
+    margin-bottom: 5px;
+    border-radius: 8px;
+    transition: all 0.2s;
     font-size: 1rem;
 }
 
-.sidebar button:hover {
+.sidebar a:hover {
     background-color: var(--hover-color);
     color: var(--accent-color);
 }
 
-.sidebar button.active {
+.sidebar a.active {
     background-color: var(--accent-color);
     color: white;
 }
 
+/* 사용자 정보 및 인증 영역 */
 .user-profile {
     margin-top: auto;
-    display: flex;
-    align-items: center;
-    gap: 15px;
-    padding: 15px;
+    padding: 20px;
     background-color: #f9f9f9;
     border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    text-align: center;
 }
 
-/* --- 메인 콘텐츠 --- */
+.user-info {
+    font-weight: bold;
+    color: var(--text-main);
+    font-size: 0.9rem;
+}
+
+.auth-links {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.auth-links a {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    text-decoration: none;
+    padding: 0;
+}
+
+.auth-links a:hover {
+    color: var(--accent-color);
+    text-decoration: underline;
+}
+
+/* 메인 콘텐츠 영역 (스크롤 가능) */
 .main-content {
     flex-grow: 1;
-    background-color: var(--main-bg);
     padding: 40px;
     overflow-y: auto;
+    background-color: var(--bg-color);
 }
 
 .welcome-card {
@@ -129,11 +146,4 @@ body {
     border: 1px solid var(--border-color);
     box-shadow: 0 2px 5px rgba(0,0,0,0.02);
     text-align: center;
-}
-
-.content-header {
-    margin-bottom: 30px;
-    border-bottom: 2px solid var(--accent-color);
-    padding-bottom: 15px;
-    color: var(--accent-color);
 }

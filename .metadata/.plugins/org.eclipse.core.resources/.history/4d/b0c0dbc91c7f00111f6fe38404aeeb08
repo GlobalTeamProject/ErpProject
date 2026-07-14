@@ -1,0 +1,136 @@
+/* --- 기존 변수 및 공통 설정 유지 --- */
+:root {
+    --bg-color: #f4f7f6;
+    --sidebar-bg: #ffffff;
+    --main-bg: #ffffff;
+    --text-main: #333333;
+    --text-muted: #666666;
+    --accent-color: #4a90e2;
+    --hover-color: #eef5ff;
+    --border-color: #e0e0e0;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Roboto, sans-serif;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-main);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.dashboard-container {
+    display: flex;
+    width: 95%;
+    max-width: 1200px;
+    height: 80vh;
+    background-color: var(--sidebar-bg);
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+    border: 1px solid var(--border-color);
+    overflow: hidden;
+}
+
+/* --- 사이드바 --- */
+.sidebar {
+    width: 250px;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    border-right: 1px solid var(--border-color);
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--accent-color);
+    margin-bottom: 40px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.nav-links {
+    list-style: none;
+    flex-grow: 1;
+}
+
+/* --- [수정된 부분] <a> 태그를 버튼처럼 스타일링 --- */
+.nav-links li a {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 12px 15px;
+    text-decoration: none;
+    color: var(--text-muted);
+    border-radius: 8px;
+    transition: all 0.2s;
+    font-size: 1rem;
+    margin-bottom: 5px; /* 메뉴 간격 추가 */
+}
+
+.nav-links li a:hover {
+    background-color: var(--hover-color);
+    color: var(--accent-color);
+}
+
+.nav-links li a.active {
+    background-color: var(--accent-color);
+    color: white;
+}
+
+.user-profile {
+    margin-top: auto;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 15px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+}
+
+/* --- 메인 콘텐츠 --- */
+.main-content {
+    flex-grow: 1;
+    background-color: var(--main-bg);
+    padding: 40px;
+    overflow-y: auto;
+}
+
+.welcome-card {
+    background: linear-gradient(135deg, #4a90e2, #63a4ff);
+    padding: 30px;
+    border-radius: 15px;
+    color: white;
+    margin-bottom: 30px;
+    box-shadow: 0 4px 10px rgba(74, 144, 226, 0.3);
+}
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.stat-card {
+    background-color: #ffffff;
+    padding: 25px;
+    border-radius: 12px;
+    border: 1px solid var(--border-color);
+    box-shadow: 0 2px 5px rgba(0,0,0,0.02);
+    text-align: center;
+}
+
+.content-header {
+    margin-bottom: 30px;
+    border-bottom: 2px solid var(--accent-color);
+    padding-bottom: 15px;
+    color: var(--accent-color);
+}

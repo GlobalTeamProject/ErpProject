@@ -1,0 +1,19 @@
+package com.example.demo;
+
+public class test {
+
+	public static void main(String[] args) {
+		int n = 0;
+
+		switch (n++) { // n이 5일 때 case 5를 실행
+	    case 5:
+	        System.out.println("기존 값 5로 실행"); // 실행됨
+	        break;
+	    case 6:
+	        System.out.println("증가된 값 6으로 실행");
+	        break;
+		}
+		
+		System.out.println("최종 n의 값: " + n); // 결과: 6
+	}
+}

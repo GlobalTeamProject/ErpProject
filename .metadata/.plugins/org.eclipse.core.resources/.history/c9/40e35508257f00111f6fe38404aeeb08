@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="UTF-8" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>nav</title>
+    <link rel="stylesheet" th:href="@{/css/index_css.css}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<!-- th:fragment="sidebar" 설정을 통해 이 nav 태그 전체를 다른 HTML에서 불러올 수 있습니다. -->
+<div class="dashboard-container">
+	<nav th:fragment="sidebar" class="sidebar">
+	    <div class="logo">
+	        <i class="fas fa-database"></i> 
+	        <span>ERP</span>
+	    </div>
+	    <ul class="nav-links">
+	        <li><a th:href="@{/main}" class="active"><i class="fas fa-home"></i> MAIN </a></li>
+	        <li><a th:href="@{/salary}"><i class="fas fa-chart-line"></i> SALARY </a></li>
+	        <li><a th:href="@{/}"><i class="fas fa-users"></i> 팀원 관리</a></li>
+	        <li><a th:href="@{/}"><i class="fas fa-cog"></i> 시스템 설정</a></li>
+	        <li><a th:href="@{/}"><i class="fas fa-question-circle"></i> 도움말</a></li>
+	    </ul>
+	    
+	    <div class="user-profile">
+	        <span class="user-info">관리자님</span>
+	        <div class="auth-links">
+	            <a th:href="@{/login}">로그인</a>
+	            <a th:href="@{/}">로그아웃</a>
+	        </div>
+	    </div>
+	</nav>
+</div>
+</html>
