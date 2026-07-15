@@ -1,0 +1,9 @@
+spring.application.name=SpringBootTest
+# 포트 번호를 8080에서 8081로 변경합니다.
+server.port=9090
+
+spring.datasource.url=jdbc:postgresql://localhost:5432/admin
+spring.datasource.username=admin
+spring.datasource.password=admin
+spring.jpa.hibernate.ddl-auto=update
+spring.jpa.database-platform=org.hibernate.dialect.PostgreSQLDialect

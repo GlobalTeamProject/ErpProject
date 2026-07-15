@@ -1,3 +1,0 @@
-spring.application.name=SpringBootTest
-# 포트 번호를 8080에서 8081로 변경합니다.
-server.port=8081

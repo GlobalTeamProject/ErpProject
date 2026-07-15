@@ -25,6 +25,10 @@ dependencies {
 	testImplementation 'org.springframework.boot:spring-boot-starter-thymeleaf-test'
 	testImplementation 'org.springframework.boot:spring-boot-starter-webmvc-test'
 	testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
+	// PostgreSQL 드라이버
+	runtimeOnly 'org.postgresql:postgresql'
+	// Spring Data JPA (데이터베이스 연결용)
+    implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
 }
 
 tasks.named('test') {

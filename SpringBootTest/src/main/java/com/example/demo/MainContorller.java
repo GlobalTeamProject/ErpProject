@@ -29,4 +29,6 @@ public class MainContorller {
     public String mainSalary() {
     	return "salary"; // templates/salary.html을 호출합니다.
     }
+    
+    
 }
