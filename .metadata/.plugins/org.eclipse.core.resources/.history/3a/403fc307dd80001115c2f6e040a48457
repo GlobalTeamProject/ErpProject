@@ -1,0 +1,11 @@
+package com.example.demo;
+
+public class sfsdfsdfsdf {
+
+	int i= 5;
+	int a = i++;
+	int b = ++i;
+	int c = (i++)+()++i;
+	System.out.println(a + "" + b +" "+c );
+	
+}

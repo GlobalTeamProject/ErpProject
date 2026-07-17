@@ -1,0 +1,33 @@
+/* 기존 :root 및 body, login-card 스타일 유지 */
+
+/* 폼 섹션 간격 관리 */
+.form-section {
+    margin-bottom: 20px;
+}
+
+/* 라벨 스타일 강제 적용 */
+.form-label {
+    display: block;
+    font-size: 14px;
+    font-weight: 500;
+    margin-bottom: 6px;
+    color: var(--text-dark);
+}
+
+/* 입력창 스타일 보정 */
+.form-control {
+    padding: 10px;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+}
+
+/* 버튼 크기 및 간격 맞춤 */
+.btn {
+    padding: 10px;
+    font-weight: 600;
+}
+
+/* 회원가입/뒤로가기 버튼 정렬 */
+.d-flex.gap-2 {
+    margin-top: 20px;
+}

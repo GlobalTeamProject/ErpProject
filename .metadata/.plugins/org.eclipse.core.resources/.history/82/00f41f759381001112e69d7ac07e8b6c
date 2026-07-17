@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="UTF-8" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Login</title>
+    <link rel="stylesheet" th:href="@{/css/login.css}">
+</head>
+<body class="login-body">
+    <div class="login-card">
+        <div class="login-header">
+            <h2>ERP System</h2>
+            <p>Enter your ID/PW</p>
+        </div>
+        <form action="/login" method="post">
+            <div class="input-group">
+                <label>Username</label>
+                <input type="text" name="username" placeholder="Enter your ID" required>
+            </div>
+            <div class="input-group">
+                <label>Password</label>
+                <input type="password" name="password" placeholder="Enter Your pwd" required>
+            </div>
+            <button type="submit" class="login-btn">Login</button>
+        </form>
+        <div class="login-footer">
+            <p align="center">Forgot your ID/PW? <br>
+            	<a th:href="@{/sign}">Find your ID</a> | <a th:href="@{/sign}">Find your PW</a> |  <a th:href="@{/sign}">Sign your ID/PW</a>
+            </p>
+        </div>
+    </div>
+</body>
+</html>

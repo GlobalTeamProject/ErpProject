@@ -24,10 +24,15 @@ public class MainContorller {
     public String mainPage() {
         return "main"; // templates/main.html을 호출합니다.
     }
-    //메인 페이지 호출
+    //급여 호출
     @GetMapping("/salary")
     public String mainSalary() {
     	return "salary"; // templates/salary.html을 호출합니다.
+    }
+    //회원가입 호출
+    @GetMapping("/sign")
+    public String loginSign() {
+    	return "sign"; // templates/sign.html을 호출합니다.
     }
     
     

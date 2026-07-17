@@ -1,0 +1,10 @@
+package com.example.demo;
+
+public class sfsdfsdfsdf {
+
+	public static void main(String[] args) {
+		int arr[] = {1,2,3,4,5};
+		int copy[] = arr;
+		copy[0]=9
+	}
+}
