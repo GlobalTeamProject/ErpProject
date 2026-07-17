@@ -27,7 +27,7 @@ An integrated ERP system designed for efficient enterprise resource management a
 ## 🛠 Tech Stack
 
 * **Language**: Java (JDK 17)
-* **Framework**: Spring Boot
+* **Framework**: Spring Boot 4.1.0
 * **Database**: postgresql
 
 ---
