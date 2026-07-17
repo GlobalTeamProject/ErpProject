@@ -18,7 +18,7 @@ An integrated ERP system designed for efficient enterprise resource management a
 
 ## 👥 Team Members
 
-* 000
+* L.H.S
 * 000
 * 000
 
@@ -28,6 +28,6 @@ An integrated ERP system designed for efficient enterprise resource management a
 
 * **Language**: Java (JDK 17)
 * **Framework**: Spring Boot
-* **Database**: Oracle Database
+* **Database**: postgresql
 
 ---
